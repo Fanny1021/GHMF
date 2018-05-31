@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ecg_switch"
+        android:title="menu0"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/blood_switch"
+        android:icon="@drawable/vector_drawable_comments"
+        android:title="menu0"
+        app:showAsAction="always"/>
+    <!--<item-->
+    <!--android:id="@+id/add_item"-->
+    <!--android:icon="@drawable/crossfit"-->
+    <!--android:title="menu0"-->
+    <!--icon_camera:showAsAction="always|withText"-->
+    <!--/>-->
+    <!--<item android:id="@+id/action_edit"-->
+        <!--android:title="menu1"-->
+        <!--android:orderInCategory="80"-->
+        <!--android:icon="@drawable/crossfit"-->
+        <!--icon_camera:showAsAction="ifRoom" />-->
+
+    <!--<item android:id="@+id/action_share"-->
+    <!--android:title="menu2"-->
+    <!--android:orderInCategory="90"-->
+    <!--android:icon="@drawable/crossfit"-->
+    <!--icon_camera:showAsAction="ifRoom" />-->
+
+    <item android:id="@+id/action_settings"
+        android:title="备选"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+</menu>

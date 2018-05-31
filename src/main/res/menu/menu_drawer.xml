@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <group android:id="@+id/gp1">
+        <item
+            android:id="@+id/drawer_device"
+            android:orderInCategory="80"
+            android:title="我的设备"
+            app:showAsAction="always|withText" />
+    </group>
+
+    <group android:id="@+id/gp2">
+    <item
+        android:id="@+id/drawer_manager"
+        android:orderInCategory="90"
+        android:title="设备管理"
+        app:showAsAction="always|withText" />
+    </group>
+
+    <group android:id="@+id/gp3">
+        <item
+            android:id="@+id/drawer_socket"
+            android:orderInCategory="100"
+            android:title="网络连接"
+            app:showAsAction="always|withText" />
+    </group>
+
+
+
+
+</menu>

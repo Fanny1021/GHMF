@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="0dip" >
+
+    <LinearLayout
+        android:id="@+id/ll_map_device_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/popupmap"
+        android:orientation="horizontal" 
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dip"
+        >
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/toogle" />
+
+        <TextView
+            android:id="@+id/map_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="设备名称"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_marginLeft="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round" />
+    </LinearLayout>
+
+</LinearLayout>

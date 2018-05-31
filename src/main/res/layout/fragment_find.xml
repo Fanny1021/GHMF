@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_device"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="发现"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:id="@+id/fl_map_father"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<com.baidu.mapapi.map.MapView-->
+                <!--android:id="@+id/baidumap"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+            <!--</com.baidu.mapapi.map.MapView>-->
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_srufaceview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.opengl.GLSurfaceView
+                android:id="@+id/mysurfaceview"
+                android:layout_width="250dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:longClickable="true" />
+
+            <ImageView
+                android:id="@+id/videoview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/videoview_standard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:visibility="gone" />
+
+            <ImageView
+
+                android:id="@+id/im_zoom"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/icon_zoom" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/rl_map_shade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/tv_load"
+                android:layout_marginTop="20dp"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载中" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

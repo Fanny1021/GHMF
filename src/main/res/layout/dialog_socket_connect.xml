@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="IP地址:" />
+            <!--<EditText-->
+            <!--android:id="@+id/et_socket_ip"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="3"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="172.20.10.8"-->
+            <!--/>-->
+            <!--<Spinner-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="3"-->
+            <!--android:id="@+id/spinner_ip"-->
+            <!--&gt;</Spinner>-->
+            <AutoCompleteTextView
+                android:id="@+id/auto_tv_ip"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:completionHint="最近5次纪录"
+                android:completionThreshold="1"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="端口号:" />
+
+            <EditText
+                android:id="@+id/et_socket_port"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="8899" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_socket_connect"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/ripple_bg"
+                android:text="连接" />
+
+            <Button
+                android:id="@+id/btn_socket_disconnect"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_bg"
+                android:text="取消" />
+
+            <ProgressBar
+                android:id="@+id/pb_socket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_socket_con"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true" />
+
+
+        <TextView
+            android:id="@+id/tv_con_pb"
+            android:layout_marginTop="20dp"
+            android:textSize="22sp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pb_socket_con"
+            android:text="连接中" />
+
+    </RelativeLayout>
+
+</FrameLayout>

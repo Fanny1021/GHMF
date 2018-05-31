@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="4dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <ImageView
+                    android:id="@+id/iv_search_back"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:tint="@color/colorAccent" />
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="center_vertical"
+                    android:hint="请输入内容"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textCapWords"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/clearSearch"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_crop_free_black_24dp"
+                    android:tint="@color/colorAccent" />
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/search_layout"
+                android:divider="@android:color/white" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        app:titleTextColor="#fff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_search_return"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/vector_drawable_return" />
+
+            <TextView
+                android:id="@+id/tv_web_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/iv_search_return"
+                android:text="搜索设备"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/ll_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home" />
+
+                <TextView
+                    android:id="@+id/tv_connect_guaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="如何正确的连接设备"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_connect_guaid1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="设备协议"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_scan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="扫描结果：" />
+
+                <TextView
+                    android:id="@+id/tv_scanResult"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:hint="得到扫描结果"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/btn_device_add_ok"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_with_alpha"
+                    android:text="确认添加该设备" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_add"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:hint="输入十位设备ID：\n1234567890" />
+
+                <Button
+                    android:id="@+id/btn_addEquip"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="添加" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:background="@color/white_with_alpha"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_scanEquip"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_crop_free_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="扫描设备二维码"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_addEquip"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_history_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="手动添加设备"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

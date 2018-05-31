@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6d6d7"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:id="@+id/toolbar_device"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:background="@color/teal"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="个人中心"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/selector_email"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/ll_userMsg_mine"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/llclick_bt_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/user_photo_mine"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/user_girl0" />
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="20sp"
+                android:id="@+id/user_name_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:id="@+id/device_num_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5台智能设备" />
+
+        </LinearLayout>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <ImageView
+               android:src="@drawable/toogle"
+               android:layout_marginRight="10dp"
+               android:layout_alignParentRight="true"
+               android:layout_centerInParent="true"
+               android:layout_width="15dp"
+               android:layout_height="15dp"
+               />
+       </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_web_health"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/llclick_bt_selector"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/web_health" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="健康资讯" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_market"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/llclick_bt_selector"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/market" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="健康商城" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_equipment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/llclick_bt_selector"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/equipment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="我的设备" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_setup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/llclick_bt_selector"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/set" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="设置" />
+
+    </LinearLayout>
+</LinearLayout>
